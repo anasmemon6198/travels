@@ -1,0 +1,107 @@
+  /* Base styles */
+  .booking-form {
+    background: linear-gradient(135deg, #634cc9 0%, #6c4fb1 100%);
+}
+
+.form-input-animation {
+    transition: all 0.3s ease;
+}
+
+.form-input-animation:focus {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    box-shadow: 0 4px 6px rgba(66, 99, 235, 0.3);
+}
+
+.service-icon {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.car-image-container {
+    overflow: hidden;
+}
+
+.car-image {
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover .car-image {
+    transform: scale(1.05);
+}
+
+/* Hero section styles */
+.hero-section {
+    height: 100vh;
+    max-height: 800px;
+}
+
+.carousel-slide {
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel-dot {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .booking-form {
+        margin-top: -50px;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+/* Counter animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.counter {
+    animation: countUp 2s ease forwards;
+}
+@media (max-width: 640px) {
+    #booking {
+      margin-top: 1.5rem; /* Adjust as needed */
+    }
+  }
+  

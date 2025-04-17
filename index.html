@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Travels - Premium Car Rental & Transport Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="pictures/alpha.png" alt="Logo" class="h-20 w-auto animate__animated animate__fadeIn">
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition-all duration-300 hover:scale-110 text-sm md:text-base">Home</a>
+                    <a href="#fleet" class="text-gray-700 hover:text-indigo-600 font-medium transition-all duration-300 hover:scale-110 text-sm md:text-base">Fleet</a>
+                    <a href="#services" class="text-gray-700 hover:text-indigo-600 font-medium transition-all duration-300 hover:scale-110 text-sm md:text-base">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium transition-all duration-300 hover:scale-110 text-sm md:text-base">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium transition-all duration-300 hover:scale-110 text-sm md:text-base">Contact</a>
+                    <a href="#booking" class="bg-indigo-600 text-white px-3 py-2 rounded-md font-medium hover:bg-indigo-700 transition duration-300 transform hover:scale-105 btn-primary text-sm md:text-base">Book Now</a>
+                </div>
+                <div class="flex md:hidden items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-gray-900 bg-opacity-50 z-50 md:hidden hidden">
+            <div class="bg-white h-full w-4/5 max-w-xs shadow-lg py-4 px-6">
+                <div class="flex justify-between items-center mb-6">
+                    <img src="alpha.png" alt="Logo" class="h-20 w-auto">
+                    <button id="close-menu-button" class="text-gray-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium py-2 transition-all duration-300">Home</a>
+                    <a href="#fleet" class="text-gray-700 hover:text-indigo-600 font-medium py-2 transition-all duration-300">Fleet</a>
+                    <a href="#services" class="text-gray-700 hover:text-indigo-600 font-medium py-2 transition-all duration-300">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium py-2 transition-all duration-300">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium py-2 transition-all duration-300">Contact</a>
+                    <a href="#booking" class="bg-indigo-600 text-white px-4 py-2 rounded-md font-medium hover:bg-indigo-700 transition duration-300 text-center mt-2">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Responsive Carousel -->
+    <section class="hero-section min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="carousel-container w-full h-full absolute top-0 left-0">
+            <div class="carousel-slide absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out">
+                <div class="bg-image bg-cover bg-center h-full w-full" style="background-image: url('picture 1.jpg'); filter: brightness(0.7);"></div>
+                <div class="slide-content absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-4 sm:px-6">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate__animated animate__fadeInDown">Luxury Fleet</h2>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl animate__animated animate__fadeInUp">Travel in style with our premium vehicles</p>
+                </div>
+            </div>
+            <div class="carousel-slide absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out">
+                <div class="bg-image bg-cover bg-center h-full w-full" style="background-image: url('picture 2.jpg'); filter: brightness(0.7);"></div>
+                <div class="slide-content absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-4 sm:px-6">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate__animated animate__fadeInDown">Professional Chauffeurs</h2>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl animate__animated animate__fadeInUp">Experienced drivers for a smooth journey</p>
+                </div>
+            </div>
+            <div class="carousel-slide absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out">
+                <div class="bg-image bg-cover bg-center h-full w-full" style="background-image: url('picture 3.jpg'); filter: brightness(0.7);"></div>
+                <div class="slide-content absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-4 sm:px-6">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate__animated animate__fadeInDown">Special Occasions</h2>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl animate__animated animate__fadeInUp">Perfect vehicles for weddings and events</p>
+                </div>
+            </div>
+            <div class="carousel-slide absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out">
+                <div class="bg-image bg-cover bg-center h-full w-full" style="background-image: url('picture 4.jpg'); filter: brightness(0.7);"></div>
+                <div class="slide-content absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-4 sm:px-6">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate__animated animate__fadeInDown">24/7 Availability</h2>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl animate__animated animate__fadeInUp">Ready to serve you anytime, anywhere</p>
+                </div>
+            </div>
+            <div class="carousel-controls absolute bottom-8 left-0 right-0 flex justify-center gap-2 sm:gap-4">
+                <button class="carousel-dot w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity duration-300"></button>
+                <button class="carousel-dot w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity duration-300"></button>
+                <button class="carousel-dot w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity duration-300"></button>
+                <button class="carousel-dot w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity duration-300"></button>
+            </div>
+            <div class="absolute bottom-20 left-0 right-0 text-center md:hidden">
+                <p class="text-white text-xs opacity-70"><i class="fas fa-arrows-alt-h mr-1"></i> Swipe to see more</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section with Modal Triggers -->
+    <section id="fleet" class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8 sm:mb-12 animate__animated animate__fadeIn">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Our Premium Fleet</h2>
+                <p class="text-gray-600 mt-4 text-base sm:text-lg max-w-2xl mx-auto">Discover our extensive collection of well-maintained vehicles suitable for any occasion.</p>
+            </div>
+            
+            <div class="flex items-center justify-center mb-6 md:hidden">
+                <span class="text-xs text-gray-500"><i class="fas fa-arrows-alt-h mr-1"></i> Scroll horizontally to see more vehicles</span>
+            </div>
+            
+            <div class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto pb-4 md:pb-0 md:overflow-x-visible snap-x snap-mandatory">
+                <!-- Car Card 1 -->
+                <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 animate__animated animate__fadeInUp animate__delay-1s flex-shrink-0 w-4/5 sm:w-2/3 md:w-full snap-center cursor-pointer" data-car='{"name":"Luxury Hatchback","photos":["pictures/aura1.png","pictures/aura2.png","pictures/aura3.png"],"category":"Premium","seats":4,"bags":2,"transmission":"Auto","price":"11","description":"A sleek and stylish hatchback perfect for city travel with modern amenities and comfort."}'>
+                    <div class="h-48 bg-gray-200 relative car-image-container">
+                        <img src="aura.png" alt="Luxury Hatchback" class="w-full h-full object-cover car-image" loading="lazy">
+                        <div class="absolute top-4 right-4 bg-indigo-600 text-white px-3 py-1 rounded-lg font-medium text-sm">
+                            Premium
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Luxury Hatchback</h3>
+                        <div class="flex flex-wrap items-center text-gray-600 mb-4 text-sm sm:text-base">
+                            <div class="flex items-center mr-4 mb-2">
+                                <i class="fas fa-user-friends mr-2"></i>
+                                <span>4 Seats</span>
+                            </div>
+                            <div class="flex items-center mr-4 mb-2">
+                                <i class="fas fa-suitcase mr-2"></i>
+                                <span>2 Bags</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tachometer-alt mr-2"></i>
+                                <span>Auto</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-600 text-sm sm:text-base">Starting from</span>
+                                <p class="text-xl sm:text-2xl font-bold text-indigo-600">₹ 11<span class="text-sm text-gray-600">/KM</span></p>
+                            </div>
+                            <button class="book-now-btn bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300 btn-primary text-sm sm:text-base" data-car='{"name":"Luxury Hatchback","photos":["pictures/aura1.png","pictures/aura2.png","pictures/aura3.png"],"category":"Premium","seats":4,"bags":2,"transmission":"Auto","price":"11","description":"A sleek and stylish hatchback perfect for city travel with modern amenities and comfort."}'>Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 animate__animated animate__fadeInUp animate__delay-2s flex-shrink-0 w-4/5 sm:w-2/3 md:w-full snap-center cursor-pointer" data-car='{"name":"Executive MPV","photos":["pictures/ertiga1.png","pictures/ertiga2.png","pictures/ertiga3.png"],"category":"Business","seats":6,"bags":4,"transmission":"Auto","price":"12","description":"Spacious and comfortable MPV ideal for family trips or business travel with ample luggage space."}'>
+                    <div class="h-48 bg-gray-200 relative car-image-container">
+                        <img src="ertiga.png" alt="Executive MPV" class="w-full h-full object-cover car-image" loading="lazy">
+                        <div class="absolute top-4 right-4 bg-indigo-600 text-white px-3 py-1 rounded-lg font-medium text-sm">
+                            Business
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Executive MPV</h3>
+                        <div class="flex flex-wrap items-center text-gray-600 mb-4 text-sm sm:text-base">
+                            <div class="flex items-center mr-4 mb-2">
+                                <i class="fas fa-user-friends mr-2"></i>
+                                <span>6 Seats</span>
+                            </div>
+                            <div class="flex items-center mr-4 mb-2">
+                                <i class="fas fa-suitcase mr-2"></i>
+                                <span>4 Bags</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tachometer-alt mr-2"></i>
+                                <span>Auto</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-600 text-sm sm:text-base">Starting from</span>
+                                <p class="text-xl sm:text-2xl font-bold text-indigo-600">₹ 12<span class="text-sm text-gray-600">/KM</span></p>
+                            </div>
+                            <button class="book-now-btn bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300 btn-primary text-sm sm:text-base" data-car='{"name":"Executive MPV","photos":["pictures/ertiga1.png","pictures/ertiga2.png","pictures/ertiga3.png"],"category":"Business","seats":6,"bags":4,"transmission":"Auto","price":"12","description":"Spacious and comfortable MPV ideal for family trips or business travel with ample luggage space."}'>Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Car Details Modal -->
+    <div id="car-details-modal" class="fixed inset-0 bg-gray-900 bg-opacity-70 z-50 flex items-center justify-center hidden transition-opacity duration-300 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-3xl w-full mx-4 p-0 relative max-h-[90vh] overflow-hidden animate__animated animate__fadeInUp animate__faster">
+            <button id="close-car-details" class="absolute top-4 right-4 text-white bg-gray-800 bg-opacity-60 hover:bg-opacity-80 rounded-full p-2 transition-all duration-300 hover:scale-110 z-10">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <!-- Image Section with Gallery -->
+                <div class="h-64 md:h-full relative bg-gradient-to-r from-indigo-500 to-indigo-700 overflow-hidden">
+                    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                    <img id="car-details-image" src="" alt="Car" class="w-full h-full object-cover mix-blend-overlay">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-3 overflow-x-auto whitespace-nowrap" id="car-photos-gallery"></div>
+                    <button id="prev-photo" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-40 hover:bg-opacity-60 text-white rounded-full p-2 transition-all duration-300">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next-photo" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-40 hover:bg-opacity-60 text-white rounded-full p-2 transition-all duration-300">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                    <div class="absolute top-6 left-6 bg-white bg-opacity-90 text-indigo-800 px-4 py-2 rounded-lg font-bold text-sm">
+                        <span id="car-details-category"></span>
+                    </div>
+                    <div class="absolute bottom-20 left-6 bg-indigo-600 text-white px-4 py-3 rounded-lg font-bold">
+                        <span id="car-details-price" class="text-2xl"></span>
+                    </div>
+                </div>
+                <!-- Content Section -->
+                <div class="p-8 overflow-y-auto max-h-[600px] car-details-content">
+                    <h3 id="car-details-name" class="text-2xl md:text-3xl font-bold mb-4 text-gray-800"></h3>
+                    <div class="bg-gray-100 p-4 rounded-xl mb-6">
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div class="bg-white rounded-full w-12 h-12 mx-auto flex items-center justify-center mb-2 shadow-md">
+                                    <i class="fas fa-user-friends text-indigo-600"></i>
+                                </div>
+                                <p class="text-gray-800 font-medium" id="car-details-seats"></p>
+                                <p class="text-xs text-gray-500">Capacity</p>
+                            </div>
+                            <div>
+                                <div class="bg-white rounded-full w-12 h-12 mx-auto flex items-center justify-center mb-2 shadow-md">
+                                    <i class="fas fa-suitcase text-indigo-600"></i>
+                                </div>
+                                <p class="text-gray-800 font-medium" id="car-details-bags"></p>
+                                <p class="text-xs text-gray-500">Luggage</p>
+                            </div>
+                            <div>
+                                <div class="bg-white rounded-full w-12 h-12 mx-auto flex items-center justify-center mb-2 shadow-md">
+                                    <i class="fas fa-tachometer-alt text-indigo-600"></i>
+                                </div>
+                                <p class="text-gray-800 font-medium" id="car-details-transmission"></p>
+                                <p class="text-xs text-gray-500">Transmission</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="font-bold text-lg mb-3 text-gray-800">Vehicle Overview</h4>
+                    <p id="car-details-description" class="text-gray-600 mb-6 leading-relaxed"></p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center">
+                            <div class="bg-green-100 rounded-full p-1">
+                                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="ml-2 text-gray-600">Free cancellation up to 24 hours before pickup</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-green-100 rounded-full p-1">
+                                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="ml-2 text-gray-600">No hidden charges, all inclusive pricing</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-green-100 rounded-full p-1">
+                                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="ml-2 text-gray-600">Professional chauffeur included</span>
+                        </div>
+                    </div>
+                    <button id="book-from-details" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-4 rounded-xl font-medium transition duration-300 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-calendar-check mr-2"></i>
+                        Book This Vehicle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 bg-gray-900 bg-opacity-70 z-50 flex items-center justify-center hidden transition-opacity duration-300 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full mx-4 p-8 relative animate__animated animate__zoomIn animate__faster">
+            <button id="close-booking" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800 rounded-full p-2 transition-all duration-300 hover:bg-gray-100">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">Book Your Journey</h3>
+                <p class="text-gray-600 mt-2">Fill in the details to reserve your vehicle</p>
+            </div>
+            <form id="booking-form" class="space-y-6">
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="car-name">Selected Vehicle</label>
+                    <input type="text" id="car-name" readonly class="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 text-gray-600 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition duration-300 animate__animated animate__fadeIn animate__delay-1s">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2" for="pickup-location">Pickup Location</label>
+                        <input type="text" id="pickup-location" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2" for="dropoff-location">Dropoff Location</label>
+                        <input type="text" id="dropoff-location" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2" for="pickup-date">Pickup Date</label>
+                        <input type="date" id="pickup-date" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition duration-300 animate__animated animate__fadeIn animate__delay-3s">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2" for="pickup-time">Pickup Time</label>
+                        <input type="time" id="pickup-time" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition duration-300 animate__animated animate__fadeIn animate__delay-3s">
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="terms" required class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                    <label for="terms" class="ml-2 block text-sm text-gray-600">I agree to the <a href="#" class="text-indigo-600 hover:underline">Terms and Conditions</a></label>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-700 hover:to-indigo-900 text-white py-4 rounded-xl font-medium transition duration-300 flex items-center justify-center shadow-lg transform hover:scale-105 animate__animated animate__pulse animate__infinite animate__slower">
+                    <i class="fas fa-calendar-check mr-2"></i>
+                    Confirm Booking
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 sm:py-16 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8 sm:mb-12 animate__animated animate__fadeIn">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Our Premium Services</h2>
+                <p class="text-gray-600 mt-4 text-base sm:text-lg max-w-2xl mx-auto">We offer a range of professional transport services tailored to your needs.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 text-center transition duration-300 hover:shadow-xl animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="bg-indigo-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-plane-arrival text-indigo-600 text-2xl service-icon"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3">Airport Transfers</h3>
+                    <p class="text-gray-600 mb-4">Reliable pickup and drop-off services at airports with flight tracking and waiting time included.</p>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 text-center transition duration-300 hover:shadow-xl animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="bg-indigo-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-business-time text-indigo-600 text-2xl service-icon"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3">Corporate Travel</h3>
+                    <p class="text-gray-600 mb-4">Professional chauffeur services for executives with flexible booking options and corporate accounts.</p>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 text-center transition duration-300 hover:shadow-xl animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="bg-indigo-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-glass-cheers text-indigo-600 text-2xl service-icon"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3">Special Events</h3>
+                    <p class="text-gray-600 mb-4">Elegant transportation for weddings, birthdays, anniversaries and other special occasions.</p>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 text-center transition duration-300 hover:shadow-xl animate__animated animate__fadeInUp animate__delay-4s">
+                    <div class="bg-indigo-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-map-marked-alt text-indigo-600 text-2xl service-icon"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3">City Tours</h3>
+                    <p class="text-gray-600 mb-4">Explore the city with our knowledgeable drivers showing you both popular and hidden gems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+                <div class="animate__animated animate__fadeInLeft">
+                    <div class="relative">
+                        <img src="about us.jpg" alt="About Us" class="rounded-xl shadow-lg w-full" loading="lazy">
+                        <div class="absolute -bottom-6 -right-6 bg-indigo-600 text-white p-6 rounded-xl shadow-lg hidden sm:block">
+                            <p class="text-xl font-bold">10+ Years</p>
+                            <p>of Excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate__animated animate__fadeInRight">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">About Alpha Travels</h2>
+                    <p class="text-gray-600 mb-6 text-base sm:text-lg">Alpha Travels provides premium car rental and chauffeur services with a focus on reliability, comfort, and customer satisfaction. Our fleet of well-maintained vehicles and professional drivers ensure a smooth journey every time.</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mb-6">
+                        <div class="text-center counter">
+                            <p class="text-2xl sm:text-3xl font-bold text-indigo-600">500+</p>
+                            <p class="text-gray-600">Happy Clients</p>
+                        </div>
+                        <div class="text-center counter" style="animation-delay: 0.2s;">
+                            <p class="text-2xl sm:text-3xl font-bold text-indigo-600">100+</p>
+                            <p class="text-gray-600">Premium Cars</p>
+                        </div>
+                        <div class="text-center counter" style="animation-delay: 0.4s;">
+                            <p class="text-2xl sm:text-3xl font-bold text-indigo-600">50+</p>
+                            <p class="text-gray-600">Expert Drivers</p>
+                        </div>
+                        <div class="text-center counter" style="animation-delay: 0.6s;">
+                            <p class="text-2xl sm:text-3xl font-bold text-indigo-600">24/7</p>
+                            <p class="text-gray-600">Support</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Professional chauffeurs with extensive training and knowledge</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Well-maintained vehicles with regular safety inspections</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Flexible booking options to suit your schedule</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Competitive pricing with transparent billing - no hidden fees</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-12 sm:py-16 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8 sm:mb-12 animate__animated animate__fadeIn">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">What Our Clients Say</h2>
+                <p class="text-gray-600 mt-4 text-base sm:text-lg max-w-2xl mx-auto">Don't just take our word for it - hear from our satisfied customers.</p>
+            </div>
+            <div class="flex items-center justify-center mb-6 md:hidden">
+                <span class="text-xs text-gray-500"><i class="fas fa-arrows-alt-h mr-1"></i> Scroll horizontally to see more testimonials</span>
+            </div>
+            <div class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto pb-4 md:pb-0 md:overflow-x-visible snap-x snap-mandatory">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col h-full animate__animated animate__fadeInUp animate__delay-1s flex-shrink-0 w-4/5 sm:w-2/3 md:w-full snap-center">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="pictures/feedback 1.jpg" alt="Testimonial" class="w-12 h-12 rounded-full" loading="lazy">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Michael R.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 flex-grow">"Exceptional service! I've used Alpha Travels for business trips multiple times and they've always been punctual, professional, and their vehicles are immaculate. Highly recommended!"</p>
+                    <div class="mt-4 text-sm text-gray-500">
+                        <i class="fas fa-map-marker-alt mr-1"></i> Business Trip, Airport Transfer
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col h-full animate__animated animate__fadeInUp animate__delay-2s flex-shrink-0 w-4/5 sm:w-2/3 md:w-full snap-center">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="pictures/feedback 2.png" alt="Testimonial" class="w-12 h-12 rounded-full" loading="lazy">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Sophia L.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 flex-grow">"Alpha Travels made our wedding day transportation perfect! The luxury car was stunning and our chauffeur was so accommodating. They added special touches that made our day even more special."</p>
+                    <div class="mt-4 text-sm text-gray-500">
+                        <i class="fas fa-map-marker-alt mr-1"></i> Wedding Transportation
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col h-full animate__animated animate__fadeInUp animate__delay-3s flex-shrink-0 w-4/5 sm:w-2/3 md:w-full snap-center">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="pictures/testimonial-3.jpg" alt="Testimonial" class="w-12 h-12 rounded-full" loading="lazy">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">David K.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 flex-grow">"I needed a reliable service for a multi-city tour with clients, and Alpha Travels exceeded my expectations. Their knowledge of the area, flexible scheduling, and comfortable vehicles made the trip a success."</p>
+                    <div class="mt-4 text-sm text-gray-500">
+                        <i class="fas fa-map-marker-alt mr-1"></i> City Tour, Corporate Event
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="#" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium transition duration-300 text-base sm:text-lg">
+                    View All Testimonials
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8 sm:mb-12 animate__animated animate__fadeIn">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Contact Us</h2>
+                <p class="text-gray-600 mt-4 text-base sm:text-lg max-w-2xl mx-auto">Have questions or ready to book? Reach out to our friendly team.</p>
+            </div>
+            <div class="grid md:grid-cols-5 gap-8">
+                <div class="md:col-span-2 animate__animated animate__fadeInLeft">
+                    <div class="bg-gray-100 p-6 rounded-xl h-full">
+                        <h3 class="text-xl font-bold mb-6">Get In Touch</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 rounded-full p-3 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-indigo-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold">Main Office</h4>
+                                    <p class="text-gray-600">Aajwa Road, Vadodara, Gujarat, 390019</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 rounded-full p-3 flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-indigo-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold">Phone</h4>
+                                    <p class="text-gray-600">+91 9979761242</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 rounded-full p-3 flex-shrink-0">
+                                    <i class="fas fa-envelope text-indigo-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold">Email</h4>
+                                    <p class="text-gray-600">travelsalphaindia@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-3">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-indigo-100 w-10 h-10 rounded-full flex items-center justify-center transition duration-300 hover:bg-indigo-200">
+                                    <i class="fab fa-facebook-f text-indigo-600"></i>
+                                </a>
+                                <a href="#" class="bg-indigo-100 w-10 h-10 rounded-full flex items-center justify-center transition duration-300 hover:bg-indigo-200">
+                                    <i class="fab fa-twitter text-indigo-600"></i>
+                                </a>
+                                <a href="#" class="bg-indigo-100 w-10 h-10 rounded-full flex items-center justify-center transition duration-300 hover:bg-indigo-200">
+                                    <i class="fab fa-instagram text-indigo-600"></i>
+                                </a>
+                                <a href="#" class="bg-indigo-100 w-10 h-10 rounded-full flex items-center justify-center transition duration-300 hover:bg-indigo-200">
+                                    <i class="fab fa-linkedin-in text-indigo-600"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-3 animate__animated animate__fadeInRight">
+                    <div class="bg-white shadow-lg rounded-xl p-6 border border-gray-200">
+                        <h3 class="text-xl font-bold mb-6">Send a Message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="name">Full Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition duration-300 form-input-animation">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="email">Email Address</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition duration-300 form-input-animation">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition duration-300 form-input-animation">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="subject">Subject</label>
+                                    <select id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition duration-300 form-input-animation">
+                                        <option>General Inquiry</option>
+                                        <option>Booking Request</option>
+                                        <option>Corporate Account</option>
+                                        <option>Feedback</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 font-medium mb-2" for="message">Your Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition duration-300 form-input-animation"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-lg font-medium transition duration-300 btn-primary flex items-center justify-center">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Alpha Travels</h4>
+                    <p class="text-gray-400 mb-4">Providing premium car rental and chauffeur services with a focus on reliability, comfort, and customer satisfaction.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#fleet" class="text-gray-400 hover:text-white transition duration-300">Fleet</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Airport Transfers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Corporate Travel</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Special Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">City Tours</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Long Distance Travel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and promotions.</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-l-lg focus:outline-none flex-grow">
+                            <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-r-lg transition duration-300">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 sm:mb-0">© 2025 Alpha Travels. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-indigo-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-indigo-700 z-10">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>
